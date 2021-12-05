@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Labs environment for data science with Jupyter, R, and Scala." />
+    <title>IBM Developer Skills Network - Labs</title>
+
+    
+      <script>
+        var DEFAULT_HEARTBEAT_TIME = 120;
+        console.log("Persisting DEFAULT_HEARTBEAT_TIME as " + DEFAULT_HEARTBEAT_TIME);
+        var INACTIVE_LOGOUT_TIME = 30;
+      </script>
+    
+
+    
+      
+        <!-- start Google Analytics -->
+        <script defer>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-1433936-16', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <!-- end Google Analytics -->
+      
+
+      
+        <meta name="google-site-verification" content="" />
+      
+
+      
+        <script type="text/javascript" src="https://cdn.ravenjs.com/3.6.1/raven.min.js" defer></script>
+        <script defer>
+          // Once everything including subframes and stylesheets is loaded
+          window.addEventListener('load', function(){
+            function configureRaven() {
+              Raven.config('https://b052ab88487148ac9ff6eed308fd111b@sentry.skills.network/4', {
+                logger: 'monocle-frontend'
+              }).install();
+            }
+
+            if (Raven) {
+              configureRaven();
+            } else {
+              setTimeout(function(){ configureRaven(); }, 500);
+            }
+          });
+        </script>
+      
+
+      
+        <!-- Inactivity session prompt start-->
+        <script>
+          var INACTIVITY_SESSION_ENABLED = JSON.parse('true');
+        </script>
+
+        <!-- Inactivity session prompt end -->
+      
+
+      
+        <!-- Add CC portal urls into authorized domain list -->
+        <script>
+          var AUTHORIZED_PORTAL_LIST = JSON.parse('["https://courses.407etr.skillsnetwork.site/", "https://500startups.courses.cognitiveclass.ai/", "https://courses.6789.skillsnetwork.site/", "https://courses.aa-skillscloud.skillsnetwork.site/", "https://courses.abi.skillsnetwork.site/", "https://courses.academicinitiative.cognitiveclass.ai/", "https://courses.accenture.cognitiveclass.ai/", "https://courses.acme.skillsnetwork.site/", "https://courses.acme-dev-labs-prod.portals-dev.apset.xyz/", "https://courses.acme-itl.cognitiveclass.ai/", "https://courses.acme-tor.cognitiveclass.ai/", "https://courses.acme2.skillsnetwork.site/", "https://courses.aec.skillsnetwork.site/", "https://courses.ai4health.cognitiveclass.ai/", "https://courses.aibenelux.skillsnetwork.site/", "https://courses.aicte.skillsnetwork.site/", "https://aig.courses.bigdatauniversity.com/", "https://courses.aku.skillsnetwork.site/", "https://courses.allsoftsolutions.skillsnetwork.site/", "https://courses.analytixlabs.skillsnetwork.site/", "https://courses.andy-v2.skillsnetwork.site/", "https://ann-auto-test.courses.cognitiveclass.ai/", "https://anndemo.courses.cognitiveclass.ai/", "https://anndemo3.courses.cognitiveclass.ai/", "https://courses.apdlearning.skillsnetwork.site/", "https://courses.cc.apset.xyz/", "https://courses.apskills.cognitiveclass.ai/", "https://courses.arrow.cognitiveclass.ai/", "https://courses.arya-dev.skillsnetwork.site/", "https://courses.aster-dev.skillsnetwork.site/", "https://courses.aster-dev1.skillsnetwork.site/", "https://courses.aster-test.skillsnetwork.site/", "https://courses.aster-v1.skillsnetwork.site/", "https://courses.aster-v2.skillsnetwork.site/", "https://courses.aster-v3.skillsnetwork.site/", "https://courses.atbuedu-online.skillsnetwork.site/", "https://courses.atec.skillsnetwork.site/", "https://courses.automation-test.portals-dev.apset.xyz/", "https://courses.avon.skillsnetwork.site/", "https://courses.backup-test.skillsnetwork.site/", "https://courses.bdu.bigdatarchitect.com/", "https://courses.bdu.blifutureready.org", "https://courses.ben-dev.skillsnetwork.site/", "https://courses.ben-dev1.skillsnetwork.site/", "https://courses.bibs.skillsnetwork.site/", "https://courses.skills.bigoutdoorsinc.com/", "https://bli.courses.bigdatauniversity.com/", "https://courses.bli.skillsnetwork.site/", "https://courses.bnp.cognitiveclass.ai/", "https://courses.boc.skillsnetwork.site/", "https://courses.boeing.skillsnetwork.site/", "https://courses.bp2i.cognitiveclass.ai/", "https://courses.br.cognitiveclass.ai/", "https://courses.bvc.skillsnetwork.site/", "https://c2c.courses.cognitiveclass.ai/", "https://courses.testingdomain.skillsnetwork.site/", "https://courses.call4codechina.skillsnetwork.site/", "https://courses.callforcode.skillsnetwork.site/", "https://courses.canlab-cc.skillsnetwork.site/", "https://courses.cas.skillsnetwork.site/", "https://courses.casy.skillsnetwork.site/", "https://courses.cba.cognitiveclass.ai/", "https://courses.ccai.skillsnetwork.site/", "https://courses.ccai-staging.skillsnetwork.site/", "https://courses.ccea.skillsnetwork.site/", "https://courses.centrum.cognitiveclass.ai/", "https://courses.centurylink.skillsnetwork.site/", "https://courses.cestar.cognitiveclass.ai/", "https://cibc.courses.bigdatauniversity.com/", "https://courses.cic-groningen.skillsnetwork.site/", "https://courses.citi.cognitiveclass.ai/", "https://courses.cloudacademy.skillsnetwork.site/", "https://courses.bigdatauniversity.com.cn/", "https://courses.cobrian.skillsnetwork.site/", "https://courses.cognitiveclass.ai/", "https://courses.cognitivefactory.skillsnetwork.site", "https://cognizant.courses.cognitiveclass.ai/", "https://courses.commerzbank.skillsnetwork.site/", "https://cornellu.courses.cognitiveclass.ai", "https://courses.course-dev.skills.network/", "https://courses.course-dev-test.skillsnetwork.site/", "https://courses.course-dev.skills.network", "https://courses.course-dev.skills.network", "https://courses.cognitivefactory.skillsnetwork.site/", "https://courses.crescent.skillsnetwork.site/", "https://courses.cts.skillsnetwork.site/", "https://courses.ctsstage.skillsnetwork.site/", "https://courses.cu.skillsnetwork.site/", "https://courses.daniel-che01.skillsnetwork.site/", "https://courses.daniel-dallas-demo.skillsnetwork.site/", "https://courses.daniel-test-oc.skillsnetwork.site/", "https://courses.daniel-test-oc-2.skillsnetwork.site/", "https://courses.daniel-testing.skillsnetwork.site/", "https://courses.darjyo.skillsnetwork.site/", "https://courses.datasavvyngo.skillsnetwork.site/", "https://courses.datatrained.skillsnetwork.site/", "https://courses.db2.skillsnetwork.site/", "https://courses.dbs.skillsnetwork.site/", "https://courses.ddn.skillsnetwork.site/", "https://courses.default.skillsnetwork.site/", "https://courses.dibujandosonrisas.skillsnetwork.site/", "https://courses.diego-v1.skillsnetwork.site/", "https://courses.360digitmg.skillsnetwork.site/", "https://courses.disney.skillsnetwork.site/", "https://courses.dituniversity.skillsnetwork.site/", "https://courses.diverseinfluencers.skillsnetwork.site/", "https://courses.dmc.cognitiveclass.ai/", "https://courses.dresmara.skillsnetwork.site/", "https://courses.drpint.skillsnetwork.site/", "https://courses.dsai.skillsnetwork.site/", "https://courses.dsi-b.skillsnetwork.site/", "https://courses.dta.cognitiveclass.ai/", "https://courses.dtc-online.skillsnetwork.site/", "https://dxc.courses.bigdatauniversity.com/", "https://courses.eclipse-training.skillsnetwork.site/", "https://courses.skillsnet.eduvance.in/", "https://courses.eilabs.skillsnetwork.site/", "https://courses.ensimag.skillsnetwork.site/", "https://courses.entel.cognitiveclass.ai/", "https://courses.excelr.skillsnetwork.site/", "https://courses.ey-ibm-techhub.skillsnetwork.site/", "https://courses.fastlane.skillsnetwork.site/", "https://courses.favcode.courses/", "https://courses.fi.skillsnetwork.site/", "https://courses.fnuniv.cognitiveclass.ai/", "https://courses.frcc.cognitiveclass.ai/", "https://courses.futo.skillsnetwork.site/", "https://courses.futureskills.cognitiveclass.ai/", "http://courses.bdutest.galvanize.com/", "https://courses.gardencity.skillsnetwork.site/", "https://courses.gbm.skillsnetwork.site/", "https://courses.gbs-tt.skillsnetwork.site/", "https://courses.gdutwork.skillsnetwork.site/", "https://courses.geico.bigdatauniversity.com/", "https://courses.geico-it.skillsnetwork.site/", "https://courses.georgiancollege.skillsnetwork.site/", "https://courses.gep-h.skillsnetwork.site/", "https://courses.gm-itic.skillsnetwork.site/", "https://courses.gmf.skillsnetwork.site/", "https://courses.gogoschool.skillsnetwork.site/", "https://courses.greycampus.skillsnetwork.site/", "https://courses.greycampustest.skillsnetwork.site/", "https://courses.guni.skillsnetwork.site/", "https://courses.hackmit.skillsnetwork.site/", "https://courses.hcl.skillsnetwork.site/", "https://courses.helmfile-deployment.skillsnetwork.site/", "https://courses.hitam.skillsnetwork.site/", "https://courses.iag.cognitiveclass.ai/", "https://courses.ibm-developer-dev.skillsnetwork.site/", "https://courses.ibmaihardware.skillsnetwork.site/", "https://courses.ibmautomationacademy.cognitiveclass.ai/", "https://courses.ibmcep.cognitiveclass.ai/", "https://courses.ibmdeveloper.skillsnetwork.site/", "https://courses.ibmdevelopers.portals-dev.apset.xyz/", "https://courses.ibmeph.skillsnetwork.site/", "https://courses.icbc.skillsnetwork.site/", "https://courses.icicibank.skillsnetwork.site/", "https://courses.iciciprulife.skillsnetwork.site/", "https://courses.ide.skillsnetwork.site/", "https://courses.idem.skillsnetwork.site/", "https://courses.db2.skillsnetwork.site/", "https://courses.cc.imarticus.org/", "https://courses.impactlabs.skillsnetwork.site/", "https://courses.indiafirstlife.skillsnetwork.site/", "https://courses.informix.skillsnetwork.site/", "https://courses.infosys.skillsnetwork.site/", "https://courses.learn.intellipaat.com/", "https://courses.ironwood-1.skillsnetwork.site/", "https://courses.ironwood-migration.skillsnetwork.site/", "https://courses.ironwood-migration-oauth.skillsnetwork.site/", "https://courses.ironwood-migration-saml.skillsnetwork.site/", "https://courses.ironwood-migration2.skillsnetwork.site/", "https://courses.ironwood-migration3.skillsnetwork.site/", "https://courses.ironwood-test.skillsnetwork.site/", "https://courses.bdu.intela-edu.com/", "https://courses.itps.skillsnetwork.site/", "https://courses.izjgroup.com/", "https://courses.jacky-dev.skillsnetwork.site/", "https://courses.jacky-v1.skillsnetwork.site/", "https://courses.jacky-v2.skillsnetwork.site/", "https://courses.jacky-v3.skillsnetwork.site/", "https://courses.jacky-v4.skillsnetwork.site/", "https://courses.james-dev-a.skillsnetwork.site/", "https://courses.james-dev-os2.skillsnetwork.site/", "https://courses.james-redis-dev.skillsnetwork.site/", "https://courses.james-tang.skillsnetwork.site/", "https://courses.james-test.skillsnetwork.site/", "https://courses.james-test-hkg.skillsnetwork.site/", "https://james-test-with-ann.courses.cognitiveclass.ai/", "https://james-test-with-ann2.courses.cognitiveclass.ai/", "https://james-test-without-ann.courses.cognitiveclass.ai/", "https://james-test-without-ann2.courses.cognitiveclass.ai/", "https://courses.james-test3.skillsnetwork.site/", "https://courses.james-test4.skillsnetwork.site/", "https://courses.jamest-v1.skillsnetwork.site/", "https://courses.jason-v1.skillsnetwork.site/", "https://courses.jecrc.skillsnetwork.site/", "https://courses.cc.jigsawacademy.net/", "https://joshdev.courses.cognitiveclass.ai/", "https://courses.kiet.skillsnetwork.site/", "https://courses.kpmg-china.skillsnetwork.site", "https://courses.krupanidhi.skillsnetwork.site/", "https://courses.open-edx.apps.mvplab-rhosp.cnt.sogei.it/", "https://courses.laureate.cognitiveclass.ai/", "https://courses.learnvista.skillsnetwork.site/", "https://courses.liceocontadora.skillsnetwork.site/", "https://courses.liceodigital.skillsnetwork.site/", "https://lighthouselabs.courses.cognitiveclass.ai/", "https://courses.linkpuertorico.skillsnetwork.site/", "https://courses.macai.skillsnetwork.site/", "https://courses.mandala.skillsnetwork.site/", "https://courses.manulife.cognitiveclass.ai/", "https://courses.mapfre.skillsnetwork.site/", "https://marcio.courses.cognitiveclass.ai/", "https://courses.mceme.skillsnetwork.site/", "https://courses.mds.cognitiveclass.ai/", "https://michael-dev.courses.cognitiveclass.ai/", "https://courses.michael-dev1.skillsnetwork.site/", "https://courses.michael-juniper.skillsnetwork.site/", "https://courses.michael-ocp.skillsnetwork.site/", "https://courses.michael-test.skillsnetwork.site/", "https://courses.michael-v3.skillsnetwork.site/", "https://courses.michael-v4.skillsnetwork.site/", "https://courses.michael-v5.skillsnetwork.site/", "https://courses.michael-v6.skillsnetwork.site/", "https://courses.michael-v7.skillsnetwork.site/", "https://courses.mietjammu.skillsnetwork.site/", "https://courses.mindhand.cognitiveclass.ai/", "https://courses.missionreadyhq.cognitiveclass.ai/", "https://courses.mitibmwatsonailab.cognitiveclass.ai/", "https://courses.mku.skillsnetwork.site/", "https://courses.mlzc.skillsnetwork.site/", "https://courses.mlzc-syd.skillsnetwork.site/", "https://courses.modyu.skillsnetwork.site/", "https://courses.mohawkcollege.skillsnetwork.site/", "https://courses.mongo-migrate.skillsnetwork.site/", "https://courses.morpheuslatam.skillsnetwork.site/", "https://courses.movius.skillsnetwork.site/", "https://courses.mrcet.skillsnetwork.site/", "https://courses.mruniversity.skillsnetwork.site/", "https://courses.myclass.skillup.online/", "https://courses.n41.cognitiveclass.ai/", "https://courses.nce.skillsnetwork.site/", "https://courses.new-compete-test.skillsnetwork.site/", "https://courses.newcollar.cognitiveclass.ai/", "https://courses.nexplore.skillsnetwork.site/", "https://courses.nfs-test.skillsnetwork.site/", "https://courses.nift.skillsnetwork.site/", "https://courses.nonia.skillsnetwork.site/", "https://courses.northern.skillsnetwork.site/", "https://courses.npower.cognitiveclass.ai/", "https://courses.nrb.skillsnetwork.site/", "https://courses.nsic.cognitiveclass.ai/", "https://courses.ntuc.skillsnetwork.site/", "https://courses.okd-demo.skillsnetwork.site/", "https://courses.ol-staging.skillsnetwork.site/", "https://courses.openliberty.skillsnetwork.site/", "https://courses.openshift3.skillsnetwork.site/", "https://courses.openshift4-test.skillsnetwork.site/", "https://courses.openshifting.skillsnetwork.site/", "https://courses.persistent.skillsnetwork.site/", "https://courses.piet.skillsnetwork.site/", "https://pimco.courses.cognitiveclass.ai/", "https://courses.pingan.skillsnetwork.site/", "https://courses.pl-staging.skillsnetwork.site/", "https://courses.pnc.skillsnetwork.site/", "https://courses.polandlearns.skillsnetwork.site/", "https://courses.portal-gen2.skillsnetwork.site/", "https://courses.portal-gen2-01.skillsnetwork.site/", "https://courses.portal-gen2-02.skillsnetwork.site/", "https://courses.portal-gen2-03.skillsnetwork.site/", "https://courses.portal-gen2-04.skillsnetwork.site/", "https://courses.portal-gen2-05.skillsnetwork.site/", "https://courses.portal-gen2-06.skillsnetwork.site/", "https://courses.portal-gen2-07.skillsnetwork.site/", "https://courses.portal-gen2-08.skillsnetwork.site/", "https://courses.portal-gen2-09.skillsnetwork.site/", "https://courses.portal-gen2-10.skillsnetwork.site/", "https://courses.portal-gen2-11.skillsnetwork.site/", "https://courses.ptech-china.skillsnetwork.site/", "https://courses.ptech-china-dev.skillsnetwork.site/", "https://courses.ptech-china-stag.skillsnetwork.site/", "https://courses.ptech.ibmclientcenter.cn/", "https://courses.rbc.skillsnetwork.site/", "https://courses.rbcdigital.skillsnetwork.site/", "https://courses.rda.skillsnetwork.site/", "https://courses.recode.skillsnetwork.site/", "https://courses.red-poland-test.skillsnetwork.site/", "https://courses.red-portal-test.skillsnetwork.site/", "https://courses.repsol.skillsnetwork.site/", "https://courses.restorationhardware.skillsnetwork.site/", "https://courses.rgpv.skillsnetwork.site/", "https://courses.rhacademy.skillsnetwork.site/", "https://courses.rhas.skillsnetwork.site/", "https://courses.ricos.skillsnetwork.site/", "https://courses.rit.skillsnetwork.site/", "https://courses.rohit-dev.skillsnetwork.site/", "https://courses.rohit-test.skillsnetwork.site/", "https://courses.rrc.skillsnetwork.site/", "https://courses.rtc.cognitiveclass.ai/", "https://courses.rutgers.cognitiveclass.ai/", "https://courses.sa.edunetworld.com/", "https://courses.sait.skillsnetwork.site/", "https://courses.samshiksha.skillsnetwork.site/", "https://courses.samshiksha-courses.skillsnetwork.site/", "https://courses.samshiksha-dev.skillsnetwork.site/", "https://courses.sanofi.skillsnetwork.site", "https://courses.santanderdojo.skillsnetwork.site/", "https://courses.sbsa.skillsnetwork.site/", "https://courses.scotiabank.skillsnetwork.site/", "https://courses.secgadata.skillsnetwork.site/", "https://courses.seneca.skillsnetwork.site/", "https://courses.sgbau.skillsnetwork.site/", "https://courses.shell-demo.skillsnetwork.site/", "https://courses.shooliniuniversity.skillsnetwork.site/", "https://courses.skillsnet.simplilearn.com/", "https://sjtu.courses.bigdatauniversity.com.cn/", "https://courses.skillfloor.skillsnetwork.site/", "https://courses.skillsbuild.skillsnetwork.site/", "https://courses.learn.skillup.online/", "https://courses.skillup-dev.skillsnetwork.site/", "https://courses.skygoalacademy.skillsnetwork.site/", "https://courses.sl.skillsnetwork.site/", "https://courses.smartbridge.skillsnetwork.site/", "https://courses.sn-faculty.skillsnetwork.site/", "https://courses.snu.skillsnetwork.site/", "https://courses.sogei.skillsnetwork.site/", "https://courses.sogei-dev.skillsnetwork.site/", "https://courses.sonofi.skillsnetwork.site/", "https://courses.sporange.skillsnetwork.site/", "https://courses.srmcem.skillsnetwork.site/", "https://courses.srmuh.skillsnetwork.site/", "https://courses.ssc-classroom.skillsnetwork.site/", "https://courses.startupacademy.skillsnetwork.site/", "https://courses.statestreet.skillsnetwork.site/", "https://courses.sterlite.skillsnetwork.site/", "https://courses.suncor.skillsnetwork.site/", "https://courses.apps.portals-dev-svl01.os.fyre.ibm.com/", "https://courses.svvv.skillsnetwork.site/", "https://courses.swiss-schools.skillsnetwork.site/", "https://courses.syd.cognitiveclass.ai/", "https://courses.tac.skillsnetwork.site/", "https://courses.talentio.skillsnetwork.site/", "https://tcs.courses.cognitiveclass.ai/", "https://courses.td.skillsnetwork.site/", "https://courses.tdbank.skillsnetwork.site/", "https://courses.tdcc.skillsnetwork.site/", "https://courses.technet.cognitiveclass.cn/", "https://courses.techstars.cognitiveclass.ai/", "https://courses.techusandpit.cognitiveclass.ai/", "https://courses.test.skillsnetwork.site/", "https://courses.test-migration.skillsnetwork.site/", "https://courses.apps.portals-dev-svl01.os.fyre.ibm.com/", "https://courses.test-suite.cognitiveclass.ai/", "https://courses.skills.thesmartbridge.com/", "https://courses.tmu.skillsnetwork.site/", "https://courses.tonk.skillsnetwork.site/", "https://courses.travelers.skillsnetwork.site/", "https://twdc.courses.cognitiveclass.ai/", "https://courses.bdu.ua-scs.com/", "https://courses.ubisoft.cognitiveclass.ai/", "https://courses.unalm.skillsnetwork.site/", "https://courses.uofindia.skillsnetwork.site/", "https://courses.uom.skillsnetwork.site/", "https://courses.ups.skillsnetwork.site/", "https://courses.usbank.skillsnetwork.site/", "https://usvets.courses.cognitiveclass.ai/", "https://courses.utel.skillsnetwork.site/", "https://courses.uuu-inha.skillsnetwork.site/", "https://courses.uuu-knute.skillsnetwork.site/", "https://courses.uuu-maup.skillsnetwork.site/", "https://courses.uuu-nuu.skillsnetwork.site/", "https://courses.uuu-school.skillsnetwork.site/", "https://courses.uuu-uaschool.skillsnetwork.site/", "https://courses.uuu-uzschool.skillsnetwork.site/", "https://uwindsor.courses.cognitiveclass.ai/", "https://courses.vecvit.skillsnetwork.site/", "https://courses.verizon.cognitiveclass.ai/", "https://courses.verzeo.skillsnetwork.site/", "https://courses.virtualearn.skillsnetwork.site/", "https://courses.visa.skillsnetwork.site/", "https://courses.vistas.skillsnetwork.site/", "https://courses.vit-learning.skillsnetwork.site/", "https://courses.waketech.cognitiveclass.ai/", "https://waldenu.courses.cognitiveclass.ai/", "https://courses.wdc-dt.skillsnetwork.site/", "https://courses.western.cognitiveclass.ai/", "https://courses.techusandpit.cognitiveclass.ai/", "https://courses.wipro-demo.skillsnetwork.site/", "https://courses.withibm.cognitiveclass.ai/", "https://courses.wp-techu.skillsnetwork.site/", "https://courses.wsu.skillsnetwork.site/", "https://courses.xtressials.skillsnetwork.site/", "https://courses.yay.skillsnetwork.site/", "https://courses.yiban.skillsnetwork.site/", "https://courses.yl.skillsnetwork.site/", "https://courses.yl-ptech.skillsnetwork.site/", "https://courses.yl-public.skillsnetwork.site/", "https://zambon.courses.cognitiveclass.ai/", "https://courses.izjgroup.com/"]');
+        </script>
+      
+
+      
+        
+          <!-- Add base url into authorized domain list -->
+          <script>
+            if (typeof AUTHORIZED_PORTAL_LIST === "undefined"){
+              var AUTHORIZED_PORTAL_LIST = [];
+            }
+            AUTHORIZED_PORTAL_LIST.push('https://courses.cognitiveclass.ai/');
+          </script>
+        
+      
+    
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/tailwind.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/custom_tailwind.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/app.min.css"
+    />
+
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer {
+        position: relative !important;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="min-h-screen">
+      <div class="relative overflow-hidden">
+        <main>
+          <!-- HERO -->
+          <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 overflow-hidden">
+            <div class="mx-auto max-w-7xl lg:px-8">
+              <div class="lg:grid lg:grid-cols-2 lg:gap-28">
+                <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+                  <div class="lg:py-24">
+            <h2 class="mt-4 text-gray-100 text-3xl sm:mt-5 sm:text-4xl lg:mt-6 xl:text-4xl">Browse our</h2>
+                    <h1 class="mt-2 text-4xl font-semibold text-white sm:text-6xl lg:mt-4 xl:text-6xl">
+                      <span class="block text-blue-500">Skills Network Labs</span>
+                    </h1>
+                    <p class="mt-4 text-base text-gray-300 sm:mt-6 sm:text-xl lg:mt-9 lg:text-lg xl:text-xl">
+                      Skills Network Labs is a virtual lab environment reserved for the exclusive use by the learners on IBM Developer Skills Network portals and its partners.
+                    </p>
+                    <div class="mt-10 sm:mt-12">
+                      <div class="sm:flex sm:justify-center lg:justify-start">
+                        <div class="mt-3 sm:mt-0">
+                          <a
+                            href="https://skills.network/become-an-author"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block w-full py-3 px-20 rounded-md text-blue-500 border-2 border-blue-500 font-medium transition duration-300 ease-in-out hover:text-gray-200 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">Learn more</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-28 -mb-16 sm:-mb-48 sm:mt-36 lg:m-0 lg:relative">
+                  <div class="mx-auto max-w-md max-h-44 px-0 sm:max-w-2xl sm:max-h-full lg:max-w-none">
+                    <img class="w-full transform scale-200 lg:scale-125 lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none pointer-events-none" src="/static/images/new-homepage/lab_homepage_headerbg.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GRID -->
+          <section aria-labelledby="tools-grid" class="my-8 bg-gray-50">
+            <div class="max-w-7xl mx-auto p-8 lg:p-12">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6 lg:gap-y-14 lg:gap-x-10">
+
+                <!-- CARD START -->
+                <a
+                  href="https://skills.network/tools-my-data"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group divide-y divide-gray-200 flex flex-col rounded-lg transition-all shadow-md hover:shadow-lg">
+                  <div class="w-full aspect-w-10 aspect-h-7 rounded-t-lg overflow-hidden">
+                    <img src="/static/images/new-homepage/mydata.png" alt="Person using a pen to cross a task off a productivity paper card." class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="p-8 flex-grow bg-white rounded-b-lg">
+                    <h3 class="text-lg font-medium text-gray-900">
+                      My Data
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                      A file explorer for viewing files created on Skills Network Labs
+                    </p>
+                  </div>
+                </a>
+                <!-- CARD END -->
+
+                <!-- CARD START -->
+                <a
+                  href="https://skills.network/tools-datasette"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group divide-y divide-gray-200 flex flex-col rounded-lg transition-all shadow-md hover:shadow-lg">
+                  <div class="w-full aspect-w-10 aspect-h-7 rounded-t-lg overflow-hidden">
+                    <img src="/static/images/new-homepage/datasette.png" alt="Person using a pen to cross a task off a productivity paper card." class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="p-8 flex-grow bg-white rounded-b-lg">
+                    <h3 class="text-lg font-medium text-gray-900">
+                      Datasette
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                      Explore SQL data
+                    </p>
+                  </div>
+                </a>
+                <!-- CARD END -->
+
+                <!-- CARD START -->
+                <a
+                  href="https://skills.network/tools-jupyterlab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group divide-y divide-gray-200 flex flex-col rounded-lg transition-all shadow-md hover:shadow-lg">
+                  <div class="w-full aspect-w-10 aspect-h-7 rounded-t-lg overflow-hidden">
+                    <img src="/static/images/new-homepage/jupyterlab.png" alt="Person using a pen to cross a task off a productivity paper card." class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="p-8 flex-grow bg-white rounded-b-lg">
+                    <h3 class="text-lg font-medium text-gray-900">
+                      JupyterLab
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                      Jupyter’s next generation notebook interface
+                    </p>
+                  </div>
+                </a>
+                <!-- CARD END -->
+
+                <!-- CARD START -->
+                <a
+                  href="https://skills.network/tools-rstudio-ide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group divide-y divide-gray-200 flex flex-col rounded-lg transition-all shadow-md hover:shadow-lg">
+                  <div class="w-full aspect-w-10 aspect-h-7 rounded-t-lg overflow-hidden">
+                    <img src="/static/images/new-homepage/rstudio.png" alt="Person using a pen to cross a task off a productivity paper card." class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="p-8 flex-grow bg-white rounded-b-lg">
+                    <h3 class="text-lg font-medium text-gray-900">
+                      Rstudio IDE
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                      A development environment for the R programming language
+                    </p>
+                  </div>
+                </a>
+                <!-- CARD END -->
+
+                <!-- CARD START -->
+                <a
+                  href="https://skills.network/tools-cv-studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group divide-y divide-gray-200 flex flex-col rounded-lg transition-all shadow-md hover:shadow-lg">
+                  <div class="w-full aspect-w-10 aspect-h-7 rounded-t-lg overflow-hidden">
+                    <img src="/static/images/new-homepage/cvstudio.png" alt="Person using a pen to cross a task off a productivity paper card." class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="p-8 flex-grow bg-white rounded-b-lg">
+                    <h3 class="text-lg font-medium text-gray-900">
+                      CV Studio (Alpha)
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                      Learn to build and train computer vision models—then show off your skills in an interactive web application
+                    </p>
+                  </div>
+                </a>
+                <!-- CARD END -->
+
+                <!-- CARD START -->
+                <a
+                  href="https://skills.network/tools-cloud-ide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group divide-y divide-gray-200 flex flex-col rounded-lg transition-all shadow-md hover:shadow-lg">
+                  <div class="w-full aspect-w-10 aspect-h-7 rounded-t-lg overflow-hidden">
+                    <img src="/static/images/new-homepage/cloudide.png" alt="Person using a pen to cross a task off a productivity paper card." class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="p-8 flex-grow bg-white rounded-b-lg">
+                    <h3 class="text-lg font-medium text-gray-900">
+                      Cloud IDE
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                      A full-featured IDE in your browser
+                    </p>
+                  </div>
+                </a>
+                <!-- CARD END -->
+
+                <!-- CARD START -->
+                <a
+                  href="https://skills.network/tools-cloud-ide-with-openshift"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group divide-y divide-gray-200 flex flex-col rounded-lg transition-all shadow-md hover:shadow-lg">
+                  <div class="w-full aspect-w-10 aspect-h-7 rounded-t-lg overflow-hidden">
+                    <img src="/static/images/new-homepage/cloudide-openshift.png" alt="Person using a pen to cross a task off a productivity paper card." class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="p-8 flex-grow bg-white rounded-b-lg">
+                    <h3 class="text-lg font-medium text-gray-900">
+                      Cloud IDE (with OpenShift)
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                      Cloud IDE with Docker, an IBM Container Registry namespace, and an OpenShift project already configured and ready for you to use
+                    </p>
+                  </div>
+                </a>
+                <!-- CARD END -->
+
+                <!-- CARD START -->
+                <a
+                  href="https://skills.network/tools-cloud-ide-with-kubernetes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group divide-y divide-gray-200 flex flex-col rounded-lg transition-all shadow-md hover:shadow-lg">
+                  <div class="w-full aspect-w-10 aspect-h-7 rounded-t-lg overflow-hidden">
+                    <img src="/static/images/new-homepage/cloudide-kubernetes.png" alt="Person using a pen to cross a task off a productivity paper card." class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="p-8 flex-grow bg-white rounded-b-lg">
+                    <h3 class="text-lg font-medium text-gray-900">
+                      Cloud IDE (with Kubernetes)
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                      Cloud IDE with Docker, an IBM Container Registry namespace, and a Kubernetes namespace already configured and ready for you to use
+                    </p>
+                  </div>
+                </a>
+                <!-- CARD END -->
+
+              </div>
+            </div>
+          </section>
+
+          <!-- FOOTER -->
+          <footer class="footer dark">
+  <div>
+    <a rel="noopener" target="_blank" href="https://cognitiveclass.ai/legal/">Terms of Use</a>
+    &nbsp;&nbsp;
+    <a rel="noopener" target="_blank" href="https://cognitiveclass.ai/legal/#privacypolicy">Privacy Notice</a>
+  </div>
+
+  <div class="footer__love-msg">
+    Crafted with <i class="fa fa-heart fa-fw"></i> and support from IBM
+  </div>
+
+  <div class="footer__copyright">
+    &copy; Copyright IBM Developer Skills Network
+    2021
+  </div>
+</footer>
+
+        </main>
+      </div>
+    </div>
+
+    
+    
+      <!-- start UserVoice -->
+      <script type='text/javascript' defer>
+        // Once the document is loaded but not stylesheets or subdocuments
+        window.addEventListener('DOMContentLoaded', function() {
+          var api_key = 'O5SLs1K1RfWhBYkHvMaXTg'; // pragma: whitelist secret
+          var forum_id = '246775';
+
+          // Include the UserVoice JavaScript SDK (only needed once on a page)
+          UserVoice = window.UserVoice || [];
+          (function () {
+            var uv = document.createElement('script');
+            uv.type = 'text/javascript';
+            uv.async = true;
+            uv.src = 'https://widget.uservoice.com/' + api_key + '.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(uv, s)
+          })();
+
+          
+
+          //
+          // UserVoice Javascript SDK developer documentation:
+          // https://www.uservoice.com/o/javascript-sdk
+          //
+          UserVoice.push(['showTab', 'classic_widget', {
+            mode: 'full',
+            primary_color: '#19496A',
+            link_color: '#007dbf',
+            default_mode: 'support',
+            tab_label: "Support/Feedback",
+            tab_color: '#19496A',
+            tab_position: 'middle-right',
+            tab_inverted: false
+          }]);
+
+          // Post new ideas to IBM Data Scientist Workbench forum
+          UserVoice.push(['set', 'forum_id', forum_id]);
+
+          
+        });
+
+      </script>
+      <!-- end UserVoice -->
+    
+
+    
+      <script defer>
+        var appcuesLoader = document.createElement("script");
+
+        appcuesLoader.addEventListener("load", function() {
+          function configureAppcues() {
+            // Adblockers can block Appcues
+            if (Appcues) {
+              
+                Appcues.anonymous();
+              
+            }
+          }
+
+          if (Appcues) {
+            configureAppcues();
+          } else {
+            setTimeout(function(){ configureAppcues(); }, 500);
+          }
+        });
+
+        appcuesLoader.src = 'https://fast.appcues.com/37753.js';
+        // Defer is better than async because it doesn't block rendering
+        appcuesLoader.defer = true;
+        document.getElementsByTagName("script")[0].parentNode.appendChild(appcuesLoader);
+      </script>
+
+    
+
+  </body>
+</html>
